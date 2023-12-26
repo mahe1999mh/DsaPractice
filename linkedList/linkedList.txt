@@ -1,0 +1,33 @@
+// Online Java Compiler
+
+class Node {
+    //Createing Node [data,next]
+     int data;
+     Node next;
+     Node(int data){  
+         this.data = data;
+         this.next = null;
+     }
+
+    public static void main(String[] args) {
+        
+       //Adding Data to Linked List
+       Node p1 = new Node(10);
+       Node p2 = new Node(20);
+       Node p3 = new Node(30);
+       
+       //Linking Adderss to Nodes 
+      p1.next = p2;
+      p2.next = p3;
+      Node head = p1;
+      
+      //printing Linked List
+      Node curr = head;
+      while(curr != null){
+           System.out.print(" "+curr.data);
+           curr = curr.next;
+      }
+     
+      
+    }
+}
