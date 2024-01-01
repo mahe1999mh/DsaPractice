@@ -1,9 +1,8 @@
-
 class Node {
-    constructor(data) {
-        this.data = data;
-        this.next = null;
-    }
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
 }
 
 // Adding Data to Linked List
@@ -19,6 +18,6 @@ const head = p1;
 // Printing Linked List
 let curr = head;
 while (curr !== null) {
-    console.log(" " + curr.data);
-    curr = curr.next;
+  console.log(" " + curr.data);
+  curr = curr.next;
 }
