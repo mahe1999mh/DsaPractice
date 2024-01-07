@@ -100,6 +100,9 @@ class LinkedList {
     let arr = [...arr1, ...arr2].sort();
     arr.forEach((element) => this.add(element));
   }
+  printHi(){
+    console.log("hi");
+  }
 }
 
 let linkedList = new LinkedList();
