@@ -1,0 +1,8 @@
+const arr = [10, 20, 30];
+const key = "myProperty";
+
+// Assigning an array to a property using bracket notation:
+obj[key] = [arr[1]]; // obj.myProperty now holds [20]
+
+// Assigning a string to a property using dot notation:
+obj.key = "sd";      // obj.key now holds "sd"
