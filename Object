@@ -6,3 +6,22 @@ obj[key] = [arr[1]]; // obj.myProperty now holds [20]
 
 // Assigning a string to a property using dot notation:
 obj.key = "sd";      // obj.key now holds "sd"
+
+
+--------------------Sorting--------------------
+
+let sortedNums {1:3,2:1,3:5}
+
+/ Manual sorting based on frequencies
+for (var i = 0; i < sortedNums.length - 1; i++) {
+    for (var j = i + 1; j < sortedNums.length; j++) {
+        if (numObj[sortedNums[j]] > numObj[sortedNums[i]]) {
+            // Swap elements if frequency of j is greater than frequency of i
+            var temp = sortedNums[i];
+            sortedNums[i] = sortedNums[j];
+            sortedNums[j] = temp;
+        }
+    }
+}
+//function sorting
+sortedNums?.sort((a, b) => numObj[b] - numObj[a]);
