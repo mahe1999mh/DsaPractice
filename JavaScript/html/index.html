@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p id="message1">javascript DOM</p>
+      <p id="message2">javascript</p>
+    </div>
+    <div>
+      <input type="text" name="language" value="javascript" />
+      <input type="text" name="language" value="C++" />
+    </div>
+    <div>
+      <h3 class="heading">1</h3>
+      <h3 class="heading">2</h3>
+      <h3 class="heading">3</h3>
+    </div>
+    <div>
+      <h2 class="heading2">2</h2>
+      <div id="headingDev">
+        <h2 class="heading2">2</h2>
+        <h2 class="heading2">2</h2>
+      </div>
+    </div>
+
+    <div class="QSelector">
+      <h6>S2</h6>
+      <h6>S3</h6>
+      <h6>S4</h6>
+    </div>
+    <script>
+      const msg = document.getElementById("message1");
+      console.log(msg);
+      // Output for getElementById will be:
+      // <p id="message1">javascript DOM</p>
+
+      const ByName = document.getElementsByName("language");
+      console.log(ByName);
+      // Output for getElementsByName will be:
+      // NodeList [
+      //   <input type="text" name="language" value="javascript" />,
+      //   <input type="text" name="language" value="C++" />
+      // ]
+
+      const ByTagName = document.getElementsByTagName("input");
+      console.log(ByTagName);
+      //  HTMLCollection[
+      // <input type="text" name="language" value="javascript" />,
+      // <input type="text" name="language" value="C++" />
+      // ]
+
+      const ByClassName = document.getElementsByClassName("heading");
+      console.log(ByClassName);
+      //  HTMLCollection[
+      //   <h3 class="heading">1</h3>
+      //   <h3 class="heading">2</h3>
+      //   <h3 class="heading">3</h3>
+      // ]
+
+      const QSelector = document.querySelector(".QSelector");
+      console.log(
+        QSelector.lastChild,
+        QSelector.firstChild,
+        QSelector.firstElementChild,
+        QSelector.lastElementChild,
+        "QSelector"
+      );
+    </script>
+  </body>
+</html>
