@@ -1,0 +1,66 @@
+class TreeNode {
+    constructor(value, left = null, right = null) {
+        this.value = value;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+// Tree Structure:
+//             1
+//           /   \
+//         2       3
+//        / \        \
+//       4   5        6
+
+
+const root = new TreeNode(1);
+root.left = new TreeNode(2);
+root.right = new TreeNode(3);
+
+root.left.left = new TreeNode(4);
+root.left.right = new TreeNode(5);
+root.right.right = new TreeNode(6);
+
+// **Fixed Inorder Traversal (Left → Root → Right)**
+function inOrder(root){
+    if(!root)return
+    console.log(root.value)
+    inOrder(root.left)
+    inOrder(root.right)
+}
+
+// **Fixed Postorder Traversal (Left → Right → Root)**
+function postOrder(root){
+    if(!root)return
+   
+    postOrder(root.left)
+    postOrder(root.right)
+     console.log(root.value)
+}
+
+// **Level-wise Traversal Using Queue (BFS)**
+let obj = {}
+function printTree(root, level = 0){
+    if(root == null)return
+    
+    if(!obj[level]){
+       obj[level] = []
+    }
+    
+   obj[level].push(root.value)
+    
+    printTree(root.left,level+1)
+    printTree(root.right,level+1)
+     
+}
+
+printTree(root)
+inOrder(root)
+console.log("---------------")
+postOrder(root)
+console.log("---------------")
+
+console.log(Object.values(obj))
+
+
