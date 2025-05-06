@@ -12,5 +12,9 @@ function secondMax(arr) {
   }
   return second;
 }
+function secondMax(arr) {
+return [...new Set(arr)].at(-2);
+}
+
 
 console.log(secondMax([10, 5, 8, 12, 12,20,]));
