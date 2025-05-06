@@ -1,0 +1,5 @@
+| Method   | Type         | Modifies Original? | Returns            | Usage                                    |
+| -------- | ------------ | ------------------ | ------------------ | ---------------------------------------- |
+| `split`  | String       | ❌ No               | Array              | `"a,b,c".split(",")` → `["a", "b", "c"]` |
+| `slice`  | Array/String | ❌ No               | Substring/Subarray | `[1,2,3].slice(0,2)` → `[1,2]`           |
+| `splice` | Array        | ✅ Yes              | Removed elements   | `[1,2,3].splice(1,1)` → removes `2`      |
