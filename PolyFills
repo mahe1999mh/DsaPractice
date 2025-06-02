@@ -1,5 +1,6 @@
-MAP PolyFills
 
+
+//map
 Array.prototype.myMap = function(cb){
 
      let arr = [];
@@ -9,6 +10,18 @@ Array.prototype.myMap = function(cb){
      return arr;
 }
 
-let newArr = [1,2,3].myMap((li)=> li+2)
+//filter
+Array.prototype.myFilter = function(callBack){
+let newArr = [];
+for(let i=0; i<this.length; i++){
+   if(callBack(this[i],i,this)){
+    newArr.push(this[i])
+   }
+}
+return newArr
+}
 
-console.log(newArr)
+
+
+
+
